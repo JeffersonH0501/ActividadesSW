@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TallerTS1</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script type="module" src="./scripts/serie.js" ></script>
+    <script type="module" src="./scripts/data.js" ></script>
+    <script type="module" src="./scripts/main.js"></script>
+    <style>
+
+        .encabezado {
+            background-color:rgb(50, 116, 187);
+            padding-left: 20px;
+            padding-top: 10px;
+            padding-bottom: 5px;
+            margin-bottom: 17px;
+        }
+
+        #series {
+            background-color: rgb(243, 243, 243);
+        }
+
+        .card {
+            border-radius: 5px;
+        }
+
+        #imagen {
+            text-align: center; 
+            background-color: rgb(243, 243, 243);
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="container-fluid">
+
+        <div class="row encabezado">
+            <div class="col1">
+                <img src="./imagenes/icon.png" height="30px" width="30px" alt="icon">
+            </div>
+            <div class="col-11">
+                <h4>TV series</h4>
+            </div>
+        </div>
+
+        <div class="row informacion">
+            <div class="col">
+                <table class="table">
+                    <thead class="thead-light">
+                        <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Channel</th>
+                            <th>Seasons</th>
+                        </tr>
+                    </thead>
+                    <tbody id="series">
+                    </tbody>
+                </table>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div id="imagen">
+                    </div>
+                    <div class="card-body" id="cuerpo">
+                    </div>
+                </div>                
+
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
