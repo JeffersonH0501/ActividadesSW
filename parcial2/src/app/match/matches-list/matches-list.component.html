@@ -1,0 +1,43 @@
+<div class="row">
+
+  <div class="col">
+    <h3>LISTADO DE PARTIDOS</h3>
+    <table class="table">
+      <thead class="thead-light">
+          <tr>
+              <th>#</th>
+              <th>venue</th>
+              <th>away_team_country</th>
+              <th>home_team_country</th>
+          </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let match of matches">
+          <td>
+            <dd>{{match.id}}</dd>
+          </td>
+          <td>
+            <dd>{{match.venue}}</dd>
+          </td>
+          <td>
+            <dd>{{match.away_team.name}}</dd>
+          </td>
+          <td>
+            <dd>{{match.home_team.name}}</dd>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="col">
+    <h3>LISTADO DE PAISES</h3>
+    <ul>
+      <li *ngFor="let country of countriesWithGoals">{{ country }}</li>
+    </ul>
+
+  </div>
+
+</div>
+
+

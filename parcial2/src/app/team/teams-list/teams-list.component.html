@@ -1,0 +1,26 @@
+<table class="table">
+  <thead class="thead-light">
+      <tr>
+          <th>country</th>
+          <th>draws</th>
+          <th>losses</th>
+          <th>name</th>
+      </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let team of teams">
+      <td>
+        <dd>{{team.country}}</dd>
+      </td>
+      <td>
+        <dd>{{team.draws}}</dd>
+      </td>
+      <td>
+        <dd>{{team.losses}}</dd>
+      </td>
+      <td>
+        <dd>{{team.name}}</dd>
+      </td>
+    </tr>
+  </tbody>
+</table>
