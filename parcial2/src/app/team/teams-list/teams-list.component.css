@@ -1,7 +1,53 @@
-.table {
+.row {
+  text-align: center;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: bold;
   margin-top: 50px;
 }
 
-tbody {
-  background-color: rgb(243, 243, 243);
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.table th,
+.table td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+}
+
+.table thead {
+  background-color: #f2f2f2;
+}
+
+.table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.table tbody tr:hover {
+  background-color: #e0e0e0;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  background-color: #f2f2f2;
+  padding: 10px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+
+li:hover {
+  background-color: #e0e0e0;
 }

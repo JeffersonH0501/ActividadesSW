@@ -1,26 +1,54 @@
-<table class="table">
-  <thead class="thead-light">
-      <tr>
-          <th>country</th>
-          <th>draws</th>
-          <th>losses</th>
-          <th>name</th>
-      </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let team of teams">
-      <td>
-        <dd>{{team.country}}</dd>
-      </td>
-      <td>
-        <dd>{{team.draws}}</dd>
-      </td>
-      <td>
-        <dd>{{team.losses}}</dd>
-      </td>
-      <td>
-        <dd>{{team.name}}</dd>
-      </td>
-    </tr>
-  </tbody>
-</table>
+<hr />
+
+<div class="detalle" *ngIf="selected">
+  <app-team-detail [teamDetail]="selectedTeam"></app-team-detail>
+</div>
+
+<div class="row">
+
+  <div class="col-1">
+  </div>
+
+  <div class="col-8">
+    <div class="equipos">
+      <h3>LISTADO DE EQUIPOS</h3>
+      <table class="table">
+        <thead class="thead-light">
+            <tr>
+                <th>Country</th>
+                <th>Name</th>
+                <th>Group Letter</th>
+            </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let team of teams" (click)="onSelected(team)">
+            <td>
+              <dd>{{team.country}}</dd>
+            </td>
+            <td>
+              <dd>{{team.name}}</dd>
+            </td>
+            <td>
+              <dd>{{team.group_letter}}</dd>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="col-2">
+    <div class="grupos">
+      <h3>GRUPOS</h3>
+      <p>N° DE GOLES</p>
+      <ul>
+        <li *ngFor="let group of groupsGoals">{{ group }}</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="col-1">
+  </div>
+
+
+</div>

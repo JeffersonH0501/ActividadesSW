@@ -22,23 +22,26 @@ export class MatchesListComponent implements OnInit {
   }
 
   getCountriesWithMostHomeGoals(): void {
-    const goalsByCountry: { [key: string]: number } = {}; // Firma de índice añadida
+
+    const goalsByCountry: { [key: string]: number } = {};
 
     for (const match of this.matches) {
-      const homeTeam = match.home_team;
-      const country = homeTeam.country;
-      const goals = homeTeam.goals;
 
-      if (!goalsByCountry.hasOwnProperty(country)) {
-        goalsByCountry[country] = goals;
-      } else {
-        goalsByCountry[country] += goals;
+      const country = match.home_team.name;
+      const goals = match.home_team.goals;
+
+      if (typeof goals !== 'undefined') {
+        if (!goalsByCountry.hasOwnProperty(country)) {
+          goalsByCountry[country] = goals;
+        } else {
+          goalsByCountry[country] += goals;
+        }
       }
     }
 
     const sortedCountries = Object.entries(goalsByCountry)
       .sort((a, b) => b[1] - a[1])
-      .map(([country]) => country);
+      .map(([country, goals]) => `${country}: ${goals} goals`);
 
     this.countriesWithGoals = sortedCountries;
   }

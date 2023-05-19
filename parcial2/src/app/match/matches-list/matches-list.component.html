@@ -1,14 +1,18 @@
 <div class="row">
 
-  <div class="col">
+  <div class="col-1">
+  </div>
+
+  <div class="col-8">
+
     <h3>LISTADO DE PARTIDOS</h3>
     <table class="table">
       <thead class="thead-light">
           <tr>
               <th>#</th>
-              <th>venue</th>
-              <th>away_team_country</th>
-              <th>home_team_country</th>
+              <th>Stage Name</th>
+              <th>Away Team Country</th>
+              <th>Home Team Country</th>
           </tr>
       </thead>
       <tbody>
@@ -17,7 +21,7 @@
             <dd>{{match.id}}</dd>
           </td>
           <td>
-            <dd>{{match.venue}}</dd>
+            <dd>{{match.stage_name}}</dd>
           </td>
           <td>
             <dd>{{match.away_team.name}}</dd>
@@ -28,14 +32,20 @@
         </tr>
       </tbody>
     </table>
+
   </div>
 
-  <div class="col">
-    <h3>LISTADO DE PAISES</h3>
+  <div class="col-2">
+
+    <h3>PAÍSES</h3>
+    <p>N° DE GOLES COMO LOCAL</p>
     <ul>
       <li *ngFor="let country of countriesWithGoals">{{ country }}</li>
     </ul>
 
+  </div>
+
+  <div class="col-1">
   </div>
 
 </div>

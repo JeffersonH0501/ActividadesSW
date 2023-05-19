@@ -1,0 +1,18 @@
+.card {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 30px;
+  width: 850px;
+  margin-top: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.team-name {
+  margin-bottom: 10px;
+}
+
+.team-info {
+  margin-top: 20px;
+}
